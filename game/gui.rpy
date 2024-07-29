@@ -55,7 +55,7 @@ define gui.interface_text_color = '#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "KOSUGIMARU-REGULAR.ttf"
+define gui.text_font = "OCRAEXT.ttf"
 
 ## The font used for character names.
 define gui.name_text_font = "FOT-NEWRODIN PRO EB.otf"
