@@ -295,7 +295,7 @@ screen navigation():
         style_prefix "navigation"
 
         if main_menu:
-            xalign 0.8
+            xalign 0.77
         else:
             xoffset 60
         yalign 0.5
@@ -314,7 +314,8 @@ screen navigation():
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        if not main_menu:
+            textbutton _("Preferences") action ShowMenu("preferences")
 
         if _in_replay:
 

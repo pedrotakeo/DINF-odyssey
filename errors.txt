@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/gui.rpy", line 74: Line is indented, but the preceding define statement statement does not expect a block. Please check this line's indentation.
+    define gui.interface_text_size = 50
+    ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Mon Jul 29 07:33:21 2024
