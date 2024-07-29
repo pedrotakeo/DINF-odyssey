@@ -10,7 +10,8 @@ init python:
    # How to use: 
    # config.say_menu_text_filter = lambda text: color_word(text, word=your_word, color=your_color)
 
-define ada = Character(name="Ada Lovelace", image="ada", color="#9175ff")
+define ada = Character(name="Ada Lovelace", image="ada", color="#FF80AE")
+define alan = Character(name="Alan Turing", image="alan", color="#8FD6B5")
 
 # Include disabled options in the menu options
 define config.menu_include_disabled = True
@@ -21,91 +22,108 @@ label start:
 
    "Hey, hello? Acorda! Acorda Sérgio!"
 
+   show alan neutral with dissolve
+
    "Dormindo na passarela do Dinf? Bem, se levante preciso de você!"
 
+   show alan happy 
+ 
    "Ah verdade, você não deve estar entendendo nada hahaha"
+
+   show alan neutral 
 
    "Bem, vamos resumir" 
    
-   "Quem eu sou? Ah eu sou um espectro do Alan Turing!"
+   alan happyn "Quem eu sou? Ah eu sou um espectro do Alan Turing!"
 
-   "Eu preciso da sua ajuda, pois aconteceu um probleminha..."
+   alan pain "Eu preciso da sua ajuda, pois aconteceu um probleminha..."
 
-   "Resumidamente houve uma ruptura no espaço tempo teletransportando figuras
+   alan rbf "Resumidamente houve uma ruptura no espaço tempo teletransportando figuras
    importantíssimas da computação para os dias de hoje."
    
-   "Especificamente figuras femininas da computação que agora são estudantes do seu curso..."
+   alan rbf "Especificamente figuras femininas da computação que agora são estudantes do seu curso..."
 
-   "OK eu sei que parece loucura (e é um pouco), mas você precisa acreditar, se
+   alan scream "OK eu sei que parece loucura (e é um pouco), mas você precisa acreditar, se
    você não me ajudar nessa, e rápido, as criações delas serão apagadas da
    história!"
 
-   "E não precisa ser um gênio para saber que se isso ocorrer não só a
+   alan scream"E não precisa ser um gênio para saber que se isso ocorrer não só a
    computação estará perdida, mas o mundo entrará em colapso!"
 
-   "O que você precisa fazer? Bem... eu tenho uma hipótese."
+   alan neutral "O que você precisa fazer? Bem... eu tenho uma hipótese."
    
-   "Acredito que se você as convencer e as ajudar a recriarem seus trabalhos o espaço-tempo pode
+   alan happy"Acredito que se você as convencer e as ajudar a recriarem seus trabalhos o espaço-tempo pode
    enfim se normalizar e restaurar a linha do tempo."
 
-   "ESPERA AÍ!!!" 
+   alan scream "ESPERA AÍ!!!" 
    
-   "Antes, preciso ponderar algumas coisas..."
+   alan rbf "Antes, preciso ponderar algumas coisas..."
    
-   "Primeiro: eu identifiquei três figuras com quem você precisa falar, sendo elas: "
+   alan neutral "Primeiro: eu identifiquei três figuras com quem você precisa falar, sendo elas: "
+   show alan neutral with move:
+      xalign 0.75
    
-   show ada neutral
-   "Ada Lovelace"
+   show ada neutral:
+      xalign 0.25
+   alan neutral "Ada Lovelace"
    hide ada neutral
 
-   show grace neutral
-   "Grace Hopper"
+   show grace neutral:
+      xalign 0.25
+   alan neutral "Grace Hopper"
    hide grace neutral
 
-   show hedy neutral
-   "E por último, Hedy Lammar."
+   show hedy neutral:
+      xalign 0.25
+   alan neutral "E por último, Hedy Lammar."
    hide hedy neutral
+   show alan neutral at center with move
 
-   "Segundo: elas não sabem quem são/foram."
+   alan pain "Segundo: elas não sabem quem são/foram."
    
-   "Essa ruptura tirou a memória delas, portanto não se lembram de seus feitos. Então é
+   alan scream "Essa ruptura tirou a memória delas, portanto não se lembram de seus feitos. Então é
    de suma importância que você as ajude sem falar diretamente sobre quem são ou o que criaram."
    
-   "A ruptura é muito instável e um choque desses poderia pôr tudo a perder!!"
+   alan rbf "A ruptura é muito instável e um choque desses poderia pôr tudo a perder!!"
+
+
 
    label fase1:
-      "Acho que estou vendo uma delas... Ah sim, você está certo essa é
+      alan neutral"Acho que estou vendo uma delas... Ah sim, você está certo essa é
       Ada Lovelace..."
 
-      "Bem, antes que fale com ela vamos relembrar brevemente seu feito para a computação, Augusta Ada Lovelace criou o primeiro algoritmo da história."
+      scene bkg bib with dissolve
+      show alan happy with dissolve
+      alan happy "Bem, antes que fale com ela vamos relembrar brevemente seu feito para a computação, Augusta Ada Lovelace criou o primeiro algoritmo da história."
       
-      "A função do algoritmo era computar os números de Bernoulli!"
+      alan happyn "A função do algoritmo era computar os números de Bernoulli!"
 
-      "Muito uteis para a programação e matemática, usados para sintetizar somas usando-os em
+      alan happyn "Muito uteis para a programação e matemática, usados para sintetizar somas usando-os em
       sequência ou série."
       
-      "Seu trabalho foi dividido em notas, a principal foi a nota G, a qual continha um
+      alan neutral "Seu trabalho foi dividido em notas, a principal foi a nota G, a qual continha um
       passo a passo de uma sequência de operações usando os números de
       Bernoulli."
 
-      "Bem como um diagrama demonstrando o funcionamento dessa
+      alan neutral"Bem como um diagrama demonstrando o funcionamento dessa
       desse passo a passo, ou seja, o algoritmo."
       
-      "Esse algoritmo funcionava como um loop (pois organizava operações em
+      alan happy "Esse algoritmo funcionava como um loop (pois organizava operações em
       grupos que podiam ser repetidos), sendo esse o primeiro algoritmo de
       computador publicado no mundo!"
 
-      "Além disso, Lovelace relatou que o funcionamento não se limitava apenas a
+      alan happyn "Além disso, Lovelace relatou que o funcionamento não se limitava apenas a
       esses números, mas a qualquer objeto que pudesse ser adaptado a notação do
       mecanismo."
 
-      "Inclusive, previu várias ideias atuais da programação por
+      alan scream"Inclusive, previu várias ideias atuais da programação por
       computador!"
       
-      "Como por exemplo que as máquinas poderiam um dia criar até
+      alan happy "Como por exemplo que as máquinas poderiam um dia criar até
       mesmo música de qualquer grau de complexidade..."
 
-      "Depois dessa simples apresentação, vá ver o que ela está fazendo e cumpra sua missão!"
+      alan happyn "Depois dessa simples apresentação, vá ver o que ela está fazendo e cumpra sua missão!"
+      hide alan with dissolve
 
       show ada oh at center with dissolve
 
@@ -123,7 +141,7 @@ label start:
       ada "Como eu poderia descobrir a entrada correta
       com apenas uma pergunta?"
 
-      ada meh "Você poderia me ajudar?"
+      ada oh "Você poderia me ajudar?"
 
       menu resposta:
          "\"Sim, posso, eu te ajudo e em troca você me ajuda com um problema em organizar uma sequência de operações...\"":
@@ -151,12 +169,15 @@ label start:
          
          "{b}*Dessa forma, Lovelace desaparece em um piscar de olhos*{/b}"
 
-         hide ada
+         hide ada with dissolve
 
-         "Muito bem! Confesso que me impressionou!"
-         "você conseguiu fazer com que ela recriasse seu grande feito e, como minha hipótese
+         show alan happy
+
+         alan happy"Muito bem! Confesso que me impressionou!"
+         alan happyn"você conseguiu fazer com que ela recriasse seu grande feito e, como minha hipótese
          previa, a linha do tempo envolvendo Lovelace foi restaurada..."
-         "Não temos tempo a perder Sérgio!, vamos encontrar a próxima figura da computação!"
+         alan scream"Não temos tempo a perder Sérgio!, vamos encontrar a próxima figura da computação!"
+         hide alan with dissolve
       
       label rota_b:
          pass
