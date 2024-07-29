@@ -1,51 +1,44 @@
-﻿# The script of the game goes in this file.
+﻿init python:
+   def color_word(text, word, color):
+      word_to_color = word
+      color_tag = "{color=" + color + "}%s{/color}" % word_to_color
+      return text.replace(word_to_color, color_tag)
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+   # Function to change a word color every time it appears
+   # How to use: 
+   # config.say_menu_text_filter = lambda text: color_word(text, word=your_word, color=your_color)
 
-define e = Character("Ada Lovelace")
+   config.say_menu_text_filter = lambda text: color_word(text, word="Sergio", color="#f02483")
 
+define ada = Character(name="Ada Lovelace", image="ada", color="#f02483")
 
-# The game starts here.
+# Include disabled options in the menu options
+define config.menu_include_disabled = True
 
 label start:
-    play music "audio/bubbles.mp3"
+   play music "audio/bubbles.mp3"
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+   scene bkg passarela
 
-    scene bkg passarela
+   show ada meh at center with dissolve
+   ada meh     "MEH"
+   ada think   "THINK"
+   ada neutral "NEUTRAL"
+   menu talking_with_sergio:
+      ada happy "How are you today my dear Sergio~"
+      
+      "\"Doing good\"":
+         ada sad "Yeah, me too"
+         $ love = False
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show ada meh at right
-    
-    e ""
-    
-    show ada oh at center
-    with move
-
-    # These display lines of dialogue.
-
-    e "Oh! Ola Sergio! Como vai?"
-    
-    show ada sad
-    
-    e "ooga booga booga wawa lorem ipsum dolor sit amet wa wa
-       wa wa w aw a wa w a wa w  wa wa w aw a wa w a wa w wa wa w aw a wa w a wa w"
-     
-    show ada neutral
-    
-    e "ooga booga booga wawa lorem ipsum dolor sit amet wa wa
-       wa wa w aw a wa w a wa w  wa wa w aw a wa w a wa w wa wa w aw a wa w a wa w"
-    
-    show ada think
-    
-    e "smt mano tlg kkkkkk ooga"
-
-    # This ends the game.
-
-    return
+      "\"I literally love you\"":
+         ada oh "Sergio..."
+         $ love = True
+      
+   menu marriage:
+      "Propose" if love:
+         "Please marry me Ada"
+      "Dump her":
+         "Fuck off"
+         
+   return
