@@ -17,7 +17,8 @@ define alan = Character(name="Alan Turing", image="alan", color="#8FD6B5")
 define config.menu_include_disabled = True
 
 label start:
-   play music "audio/bubbles.mp3" fadein 5.0 loop 
+   queue music [ "audio/unsweetened_mint.mp3", "audio/bubbles.mp3" ] loop fadein 2.0
+
    scene bkg passarela
 
    "Hey, hello? Acorda! Acorda Sérgio!"
@@ -60,17 +61,17 @@ label start:
    alan rbf "Antes, preciso ponderar algumas coisas..."
    
    alan neutral "Primeiro: eu identifiquei três figuras com quem você precisa falar, sendo elas: "
-   show alan neutral at right with move:
+   show alan neutral at right with move
    
-   show ada neutral at center with dissolve:
+   show ada neutral at center with dissolve
    alan neutral "Ada Lovelace"
    hide ada neutral with dissolve
 
-   show grace neutral at center with dissolve:
+   show grace neutral at center with dissolve
    alan neutral "Grace Hopper"
    hide grace neutral with dissolve
 
-   show hedy neutral at center with dissolve:
+   show hedy neutral at center with dissolve
    alan neutral "E por último, Hedy Lammar."
    hide hedy neutral with dissolve
    show alan neutral at center with move
@@ -123,7 +124,7 @@ label start:
 
       show ada oh at center with dissolve
 
-      ada "Oh! Olá Sérgio! Como vai?"
+      ada "Oh! Olá {color=#FF80AE}Sérgio{/color}! Como vai?"
 
       ada neutral "O que estou fazendo?"
 
@@ -144,4 +145,3 @@ label start:
             jump rota_a
          "\"Não, você está perdendo tempo com coisas sem importância!\"":
             jump rota_b
-
