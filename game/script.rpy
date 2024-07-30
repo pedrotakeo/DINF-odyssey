@@ -60,23 +60,19 @@ label start:
    alan rbf "Antes, preciso ponderar algumas coisas..."
    
    alan neutral "Primeiro: eu identifiquei três figuras com quem você precisa falar, sendo elas: "
-   show alan neutral with move:
-      xalign 0.75
+   show alan neutral at right with move:
    
-   show ada neutral:
-      xalign 0.25
+   show ada neutral at center with dissolve:
    alan neutral "Ada Lovelace"
-   hide ada neutral
+   hide ada neutral with dissolve
 
-   show grace neutral:
-      xalign 0.25
+   show grace neutral at center with dissolve:
    alan neutral "Grace Hopper"
-   hide grace neutral
+   hide grace neutral with dissolve
 
-   show hedy neutral:
-      xalign 0.25
+   show hedy neutral at center with dissolve:
    alan neutral "E por último, Hedy Lammar."
-   hide hedy neutral
+   hide hedy neutral with dissolve
    show alan neutral at center with move
 
    alan pain "Segundo: elas não sabem quem são/foram."
@@ -149,37 +145,3 @@ label start:
          "\"Não, você está perdendo tempo com coisas sem importância!\"":
             jump rota_b
 
-      label rota_a:
-         ada happy "Viva!! Bem vamos começar então..."
-
-         "{b}*vocês concluem o desafio que Ada enfrentava usando os
-         conhecimentos adquiridos nas aulas de ICC*{/b}"
-
-         ada happy "Muito obrigado!!"
-
-         ada think "Mas agora deixe-me ver seu problema..."
-
-         ada happy "Ah sim... usando numeros de Bernoulli... Acho q tive uma ideia de como fazer..."
-
-         "{b}*Ada Lovelace começa a escrever como se algo dentro dela soubesse
-         exatamente o que fazer*{/b}"
-
-         "{b}*Logo ela termina e mostra o que parece ser exatamente
-         o primeiro algoritmo da história, assim como foi escrito no passado...*{/b}"
-         
-         "{b}*Dessa forma, Lovelace desaparece em um piscar de olhos*{/b}"
-
-         hide ada with dissolve
-
-         show alan happy
-
-         alan happy"Muito bem! Confesso que me impressionou!"
-         alan happyn"você conseguiu fazer com que ela recriasse seu grande feito e, como minha hipótese
-         previa, a linha do tempo envolvendo Lovelace foi restaurada..."
-         alan scream"Não temos tempo a perder Sérgio!, vamos encontrar a próxima figura da computação!"
-         hide alan with dissolve
-      
-      label rota_b:
-         pass
-
-   return
