@@ -17,7 +17,7 @@ define alan = Character(name="Alan Turing", image="alan", color="#8FD6B5")
 define config.menu_include_disabled = True
 
 label start:
-   queue music [ "audio/unsweetened_mint.mp3", "audio/bubbles.mp3" ] loop fadein 2.0
+   queue music [ "audio/unsweetened_mint.mp3", "audio/bubbles.mp3" ]
 
    scene bkg passarela
 
