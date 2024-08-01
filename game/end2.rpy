@@ -46,7 +46,7 @@ label rota_b:
 
    show alan scream with dissolve
    
-   play music "audio/lacrimosa.mp3" fadein 1.5 loop
+   play music "audio/pokemon.mp3" fadein 1.5 loop
 
    alan "Mal... pelo que consigo ver falhamos na nossa missão, os programas e os próprios computadores não funcionam mais..."
 
