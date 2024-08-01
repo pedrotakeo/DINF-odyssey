@@ -46,4 +46,11 @@ label rota_a:
    previa, a linha do tempo envolvendo Lovelace foi restaurada..."
    alan scream "Não temos tempo a perder Sérgio!, vamos encontrar a próxima figura da computação!"
    hide alan with dissolve
+   play music "audio/suki.mp3" fadein 5.0 loop
+
+   scene win with dissolve
+
+   $ renpy.pause()
+
+   stop music fadeout 5.0
 return
