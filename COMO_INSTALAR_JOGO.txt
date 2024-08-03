@@ -1,0 +1,14 @@
+TUTORIAL:
+
+-Primeiro baixe Renpy para linux ou windows no link abaixo:
+
+	https://www.renpy.org/latest.html
+
+-Após baixar Renpy, passe a pasta desse repositório para dentro da pasta do Renpy;
+
+	-No windows, abra Renpy.exe e escolha uma lingua;
+	-Em linux, no terminal da pasta renpy, rode ./renpy.sh e escolha uma lingua;
+
+-Dentro do Renpy, escolha no lado esquerdo da tela do programa o jogo DINF-odyssey e aperte LAUNCH(pode estar escrito algo diferente dependendo da lingua)  no lado direito da tela.
+
+
